@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="B_card_sb.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </head>
+  <body>
+
+    <header>
+        <div class="navbar">
+          <div class="nv-logo">
+            <a href="index.html"><img src="SB_logo.png" alt="Logo" /></a>
+          </div>
+          <div class="nv-content">
+            <span class="nv-app">
+              <a href="https://play.google.com/store/apps/details?id=in.product.salary" target="_blank"><i class="fa-solid fa-mobile"></i> Try mobile app</a>
+            </span>
+            <span class="nv-price"><a href="#">Pricing</a></span>
+            <span class="nv-about"><a href="#">About Us</a></span>
+            <span class="nv-desktop"><a href="#">Desktop</a></span>
+            <span class="nv-login"><a href="#">Login</a></span>
+            <span class="nv-download"><a href="https://play.google.com/store/apps/details?id=in.product.salary" target="_blank">Download our App</a></span>
+          </div>
+        </div>
+      </header>
+    <section class="main1">
+      <div class="container1">
+        <!-- <div class="share">
+          <button class="share-a" onclick="openPop">
+            <i class="fa-solid fa-share-nodes"></i><br />
+          </button>
+        </div>
+        <div class="pop-back">
+          <div class="popup">
+            <div class="popup-header">
+              <div class="popup-title">Share</div>
+              <button class="popup-close" onclick="closePop">&times;</button>
+            </div>
+            <div class="popup-body">
+              <div class="pop-share">
+                <div class="pop-social" id="whats">
+                  <a href="#">
+                    <i class="fa-brands fa-whatsapp" style="color: green"></i>
+                    WhatsApp
+                  </a>
+                </div>
+                <div class="pop-social" id="face">
+                  <a href="#">
+                    <i class="fa-brands fa-facebook" style="color: blue"></i>
+                    Facebook
+                  </a>
+                </div>
+                <div class="pop-social" id="tweet">
+                  <a href="#">
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                    X
+                  </a>
+                </div>
+                <div class="pop-social" id="mail">
+                  <a href="#">
+                    <i class="fa-regular fa-envelope"></i>
+                    Email
+                  </a>
+                </div>
+                <div class="pop-social" id="link">
+                  <a href="#">
+                    <i class="fa-solid fa-link"></i>
+                    Copy Link
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="heading"><p>Business Card Maker</p></div>
+      </div>
+      <div class="container2">
+        <div class="business_name">
+          <label for="Business_name">
+            Business Name <span class="text-danger">*</span> 
+          </label>
+          <br/>
+          <input
+            type="text"
+            id="Business_name"
+            name="name"
+            placeholder="Business Name"
+            required
+          /> 
+          <p class="error" id="nameError">Business name is required.</p>
+          <br> <br>
+        </div>
+
+        <div class="contact_1">
+          <label for="Contact_1">
+            Contact Number 1 <span class="text-danger">*</span> 
+          </label>
+          <br/>
+          <input
+            type="number"
+            id="Contact_1"
+            name="Contact_1"
+            placeholder="+91 00000 00000"
+            title="Error Message"
+            pattern="[1-9]{1}[0-9]{9}"
+            />
+            <p class="error" id="cont1Error">Contact number 1 is required and must be a valid 10-digit number.</p>
+            <br/> <br>
+          </div>
+
+        <div class="contact_2">
+          <label for="Contact_2">
+            Contact Number 2 <span class="text-danger">*</span>
+          </label>
+          <br/>
+          <input
+            type="number"
+            id="Contact_2"
+            name="Contact_2"
+            placeholder="+91 00000 00000"
+            title="Error Message"
+            pattern="[1-9]{1}[0-9]{9}"
+          />
+          <p class="error" id="cont2Error">Contact number 2 must be a valid 10-digit number.</p>
+          <br/> <br>
+        </div>
+
+        <div class="email">
+          <label for="email"
+            >Enter your Email: <span class="text-danger">*</span> </label
+          ><br />
+          <input
+            type="email"
+            id="email"
+            placeholder="example@gmail.com"
+            pattern=".+@example\.com"
+            size="30"
+            required
+          />
+          <p class="error" id="mailError">Please enter a valid email address.</p>
+          <br /> <br>
+        </div>
+
+        <div class="website">
+          <label for="Website">Website</label><br />
+          <input
+            type="text"
+            id="website"
+            placeholder="www.salarybox.in"
+          />
+          <p class="error" id="websiteError">Please enter a valid URL.</p>
+          <br/> <br>
+        </div>
+
+        <div class="address">
+          <label for="address"
+            >Address <span class="text-danger">*</span> </label
+          ><br />
+          <input
+            type="text"
+            id="address"
+            placeholder="Address"
+          />
+          <p class="error" id="addressError">Address is required.</p>
+          <br/> <br>
+        </div>
+
+        <div class="logo_upload">
+          <label for="file" class="logo"> Upload Logo</label><br />
+          <input type="file" id="file" placeholder="Choose File" width="100%" /> 
+          <br><br>
+        </div>
+
+        <div class="generate">
+          <button id="generate_card" onclick="cardGene()">
+            <i class="fa-solid fa-id-card"></i>
+            Generate Business Card
+          </button>
+        </div>
+        <br />
+        <div class="card" id="capture">
+          <div id="card-logo"><img src="salary_box_logo.jfif" /></div>
+          <div id="card-detail">
+            <div id="busi-name">Business Name</div>
+            <div id="cont1">
+              <i class="fa-solid fa-phone"></i> <span class="cont1">+91 99999 00000</span> 
+            </div>
+            <div id="cont2">+91 99999 00000</div>
+            <div id="mail">
+              <i class="fa-solid fa-envelope"></i><span class="mail"> support@salarybox.in </span>
+            </div>
+            <div id="web">
+              <i class="fa-solid fa-globe"></i> <span class="web">www.salarybox.in </span> 
+            </div>
+            <div id="add">
+              <i class="fa-solid fa-location-dot"></i> <span class="add"> Unit No. 1002 & 1003 ,10th Floor, Tower C, Unitech Cyber Park, Durga Colony, Sector 39, Gurugram, Haryana, 122003</span>
+            </div>
+          </div>
+        </div>
+        <br />
+
+        <div class="template">
+          <div class="temp" id="temp1" onclick="changeTemp1()"></div>
+          <div class="temp" id="temp2" onclick="changeTemp2()"></div>
+          <div class="temp" id="temp3" onclick="changeTemp3()"></div>
+          <div class="temp" id="temp4" onclick="changeTemp4()"></div>
+          <div class="temp" id="temp5" onclick="changeTemp5()"></div>
+          <div class="temp" id="temp6" onclick="changeTemp6()"></div>
+          <div class="temp" id="temp7" onclick="changeTemp7()"></div>
+          <div class="temp" id="temp8" onclick="changeTemp8()"></div>
+          <div class="temp" id="temp9" onclick="changeTemp9()"></div>
+          <div class="temp" id="temp10" onclick="changeTemp10()"></div>
+        </div>
+        
+
+        <div class="type">
+          <span class="png">
+             <button class="share-a" id="png_class" onclick="openPop()"><i class="fa-solid fa-share"></i> Share</button>
+             <div class="pop-back">
+                <div class="popup">
+                  <div class="popup-header">
+                    <div class="popup-title">Share</div>
+                    <button class="popup-close" onclick="closePop()">&times;</button>
+                  </div>
+                  <div class="popup-body">
+                    <div class="pop-share">
+                      <div class="pop-social" id="whats">
+                        <a href="#">
+                          <i class="fa-brands fa-whatsapp" style="color: green"></i>
+                          WhatsApp
+                        </a>
+                      </div>
+                      <div class="pop-social" id="face">
+                        <a href="#">
+                          <i class="fa-brands fa-facebook" style="color: blue"></i>
+                          Facebook
+                        </a>
+                      </div>
+                      <div class="pop-social" id="tweet">
+                        <a href="#">
+                          <i class="fa-brands fa-square-x-twitter"></i>
+                          X
+                        </a>
+                      </div>
+                      <div class="pop-social" id="mail">
+                        <a href="#">
+                          <i class="fa-regular fa-envelope"></i>
+                          Email
+                        </a>
+                      </div>
+                      <div class="pop-social" id="link">
+                        <a href="#">
+                          <i class="fa-solid fa-link"></i>
+                          Copy Link
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </span>
+          <span class="jpg">
+             <button onclick="captureDivAsJPG()"><i class="fa-solid fa-download"></i> Download</button>
+
+          </span>
+        </div>
+      </div>
+    </section>
+    <section class="main2">
+      <div class="how">How To Make Your Business Card Using Salary Box </div>
+      <div class="ans">
+        <p>
+          Business card maker by Salary Box allows you to design unique business
+          cards to represent your business in the best way. The templates
+          available give you the power to create business cards that set you
+          apart from the competition. You can be as creative with customising
+          templates as you like. The ready-made templates will help accelerate
+          the designing procedure. You can try out different images, colour
+          schemes, font styles, and text layouts before finalising a design.
+        </p>
+      </div>
+      <div class="steps">
+        <span class="step1">
+          <div class="step-img1"></div>
+          <div class="step-wri1">
+            <span
+              class="wri1"
+              style="
+                text-decoration: underline;
+                text-underline-offset: 2px;
+                color: #009eff;
+              "
+              >Step 1:</span
+            >
+            Fill in your Business details.
+          </div>
+        </span>
+        <span class="step2">
+          <div class="step-img2"></div>
+          <div class="step-wri2">
+            <span
+              class="wri2"
+              style="
+                text-decoration: underline;
+                text-underline-offset: 2px;
+                color: #009eff;
+              "
+              >Step 2:</span
+            >
+            Select a template for your Business card.
+          </div>
+        </span>
+        <span class="step3">
+          <div class="step-img3"></div>
+          <div class="step-wri3">
+            <span
+              class="wri3"
+              style="
+                text-decoration: underline;
+                text-underline-offset: 2px;
+                color: #009eff;
+              "
+              >Step 3:</span
+            >
+            Download your Business card in the desired format.
+          </div>
+        </span>
+      </div>
+      <div class="main2-create">
+        <div class="create-button">
+          <a href="#">Create Your Business Card</a>
+        </div>
+      </div>
+    </section>
+    <section class="main4">
+      <div class="detail">
+        <div class="heading2">
+          Create an Impact For Your Brand With a Free Business Card Maker.
+        </div>
+        <div class="bullet1">
+          <i class="fa-regular fa-lightbulb"></i> Using an online business tool,
+          you can craft a good business card per your requirements. A business
+          card has an important role to play in converting leads. Irrespective
+          of you being a business professional, self-employed, or representing a
+          nonprofit venture, a professional business card is a great
+          ice-breaker.
+        </div>
+        <div class="bullet1">
+          <i class="fa-regular fa-lightbulb"></i> Prepare your business card
+          without hassle using Salary Box. You can start with a suitable template,
+          add your details to it, and get a professionally customised business
+          card within minutes. It is the simplest and effective way of giving
+          your contact details to people you want to deal with. With the Salary Box
+          business card maker app at your side, designing your business cards is
+          quick and easy.
+        </div>
+        <div class="bullet1">
+          <i class="fa-regular fa-lightbulb"></i> We have many templates that
+          are designed specifically for different industry requirements in a
+          wide variety of styles. So, no matter what business you do, Salary Box
+          business card maker has a template to make you look the best.
+        </div>
+        <div class="bullet1">
+          <i class="fa-regular fa-lightbulb"></i> Got something special in mind?
+          You can design business cards from scratch in our online business card
+          maker tool.
+        </div>
+      </div>
+    </section>
+    <section class="main5">
+      <!-- <span class="pic"></span> -->
+      <span class="competition">
+        <div class="heading3">Set Your Business Apart From The Competition</div>
+        <div class="detail1">
+          Getting your business card design is often expensive, but the Salary Box
+          business card maker allows you to make your business cards for free.
+          All you need is a few minutes, and you can create something that will
+          resonate with new and prospective customers. The best part is the
+          availability of a wide range of design templates available to ensure
+          that your cards can be unique. It is essential when you are trying to
+          create a unique identity for your business to stand out among
+          competitors.
+        </div>
+      </span>
+    </section>
+    <section class="main6">
+      <div class="unique">
+        <div class="unique-heading">
+          Make a Business Card That’s Unique And On-brand
+        </div>
+        <div class="uni-head-detail">
+          We know that a brand image can make or break a first impression. That
+          is why Salary Box offers a free business card maker tool for business
+          owners to create a unique identity for their brand. You can add your
+          logo, usle your brand colours, and choose complementary fonts to set
+          up your brand’s identity.
+        </div>
+        <!-- <div class="cam">
+          <img src="cam.PNG" alt="image" />
+        </div> -->
+        <div class="uni-head-detail">
+          We’ve also got a library of free templates to help you start
+          customising without working from scratch. You can choose the right
+          business card template to create the best design for your brand.
+          <br /><br />
+          Remember, your business card is how people remember you. With Salary Box’s
+          business card maker, you can demonstrate your services and make
+          yourself visible among competitors.
+        </div>
+      </div>
+    </section>
+    <section class="main7">
+      <div class="unique-heading">Free And Easy-to-Use Business Card Maker</div>
+      <div class="uni-head-detail">
+        Salary Box business card maker is free to use software that is created to
+        cater to the needs of a non-designer. You can simply start creating your
+        business card design on our online business card maker tool. Choose from
+        hundreds of professionally designed templates and blend them to match up
+        with your idea. <br /><br />
+
+        With Salary Box, you get the most intuitive design tools anda wide array of
+        business card templates for free. Youcan create your designs easily, and
+        save the time andmoney required to find a cost-effective tool.
+      </div>
+    </section>
+    <section class="main10">
+      <div class="try">
+        <div class="try-que">
+          <p class="heading4">So what are you waiting for?</p>
+          <p class="heading4-ans">
+            Take your business to the next level with Salary Box! Try free for 7
+            days
+          </p>
+        </div>
+        <div class="try-down">
+          <a href="https://play.google.com/store/apps/details?id=in.product.salary" style="text-decoration: none; color: white" target="_blank">
+            Download our App</a
+          >
+        </div>
+      </div>
+    </section>
+    <section class="main11">
+      <div class="spl-tools">Special Purpose Tools</div>
+      <div class="feature">
+        <div class="tool" id="tool1">
+          <a href="#">
+            <i class="fa-solid fa-pen-nib"></i>
+            <span class="tool-text"> Logo Maker</span>
+          </a>
+        </div>
+        <div class="tool" id="tool2">
+          <a href="#">
+            <i class="fa-solid fa-calculator"></i>
+            <span class="tool-text"> GST Calculator</span>
+          </a>
+        </div>
+        <div class="tool" id="tool3">
+          <a href="#">
+            <i class="fa-solid fa-file-invoice"></i>
+            <span class="tool-text"> Invoice Generator</span>
+          </a>
+        </div>
+        <div class="tool" id="tool4">
+          <a href="#">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <span class="tool-text"> Quotation Maker</span>
+          </a>
+        </div>
+        <div class="tool" id="tool5">
+          <a href="#">
+            <i class="fa-solid fa-file-lines"></i>
+            <span class="tool-text">Performa Invoice Generator</span>
+          </a>
+        </div>
+        <div class="tool" id="tool6">
+          <a href="#">
+            <i class="fa-solid fa-receipt"></i>
+            <span class="tool-text">Purchase Order Generator</span>
+          </a>
+        </div>
+        <div class="tool" id="tool7">
+          <a href="#">
+            <i class="fa-solid fa-file-lines"></i>
+            <span class="tool-text">Receipt Maker</span>
+          </a>
+        </div>
+        <div class="tool" id="tool8">
+          <a href="#">
+            <i class="fa-solid fa-calculator"></i>
+            <span class="tool-text">Depriciation Calculator</span>
+          </a>
+        </div>
+        <div class="tool" id="tool9">
+          <a href="#">
+            <i class="fa-solid fa-qrcode"></i>
+            <span class="tool-text">QR Generator</span>
+          </a>
+        </div>
+        <div class="tool" id="tool10">
+          <a href="#">
+            <i class="fa-solid fa-barcode"></i>
+            <span class="tool-text">Online Barcode Generator</span>
+          </a>
+        </div>
+        <div class="tool" id="tool11">
+          <a href="#">
+            <i class="fa-solid fa-expand"></i>
+            <span class="tool-text">QR code Generator by Image</span>
+          </a>
+        </div>
+        <div class="tool" id="tool12">
+          <a href="#">
+            <i class="fa-solid fa-calculator"></i>
+            <span class="tool-text">Straight Line Depriciation Calculator</span>
+          </a>
+        </div>
+        <div class="tool" id="tool13">
+          <a href="#">
+            <i class="fa-solid fa-qrcode"></i>
+            <span class="tool-text">Online QR code Scanner Camera </span>
+          </a>
+        </div>
+        <div class="tool" id="tool14">
+          <a href="#">
+            <i class="fa-regular fa-id-card"></i>
+            <span class="tool-text">Business Card Maker</span>
+          </a>
+        </div>
+        <div class="tool" id="tool15">
+          <a href="#">
+            <i class="fa-solid fa-barcode"></i>
+            <span class="tool-text">Online Barcode Scanner</span>
+          </a>
+        </div>
+        <div class="tool" id="tool16"></div>
+      </div>
+    </section>
+    <section class="main12">
+      <div class="faq">
+        <h3 class="faq-heading">Frequently Asked Question</h3>
+        <div class="faq-que-ans">
+          <div class="faq-que">
+            <i class="fa-solid fa-circle-question"></i> Can I create a business
+            card using Salary Box?
+          </div>
+          <div class="faq-ans">
+            Yes. Using Salary Box, you can generate a business card. You can start
+            using a free template from the professional designs of Salary Box or do
+            it all from scratch.
+          </div>
+        </div>
+        <div class="faq-que-ans">
+          <div class="faq-que">
+            <i class="fa-solid fa-circle-question"></i> Is the barcode different
+            from SKU?
+          </div>
+          <div class="faq-ans">
+            Barcode is a specially generated code that can be read using a
+            barcode scanner only. However, SKU is a unique alphanumeric code,
+            and it is used to assist internal references for the products and
+            services. Being alphanumeric, you need not scan SKU to read it.
+          </div>
+        </div>
+        <div class="faq-que-ans">
+          <div class="faq-que">
+            <i class="fa-solid fa-circle-question"></i> Can I share the business
+            cards I make on the Salary Box app digitally?
+          </div>
+          <div class="faq-ans">
+            Yes. You can download the business card and share it with your
+            customers. You can share it over to their WhatsApp or email from the
+            software as it is feasible for your requirements.
+          </div>
+        </div>
+        <div class="faq-que-ans">
+          <div class="faq-que">
+            <i class="fa-solid fa-circle-question"></i> Is the Salary Box app free
+            to use for making business cards?
+          </div>
+          <div class="faq-ans">
+            Yes. You can choose from a wide range of business card templates
+            available on our website and create one for yourself. You can use it
+            as you want for free. You can access premium features with premium
+            plans.
+          </div>
+        </div>
+        <div class="faq-que-ans">
+          <div class="faq-que">
+            <i class="fa-solid fa-circle-question"></i> Can I save my business
+            card in Salary Box to edit it later?
+          </div>
+          <div class="faq-ans">
+            Yes. You can save the business cards in the Salary Box app to edit them
+            later. It will help you save time to make it again when you change a
+            phone number, title, or address.
+          </div>
+        </div>
+        <div class="faq-que-ans">
+          <div class="faq-que">
+            <i class="fa-solid fa-circle-question"></i> Is my data safe with
+            Salary Box?
+          </div>
+          <div class="faq-ans">
+            Yes. Salary Box keeps your data encrypted. Only you can access the data.
+            You can create a backup of your data in Google Drive for local
+            storage using the Salary Box app.
+          </div>
+        </div>
+        <div class="faq-que-ans">
+          <div class="faq-que">
+            <i class="fa-solid fa-circle-question"></i> Can I put my logo on a
+            business card?
+          </div>
+          <div class="faq-ans">
+            Yes. Salary Box business card templates are fully customisable, and you
+            can add a logo, change the colour, and customise the business card
+            as per your requirement.
+          </div>
+        </div>
+        <div class="faq-que-ans">
+          <div class="faq-que">
+            <i class="fa-solid fa-circle-question"></i> Is Salary Box business card
+            maker available on iOs devices?
+          </div>
+          <div class="faq-ans">
+            No. The Salary Box app is currently unavailable for iOs devices. You can
+            use the business card maker tool on your Windows computer.
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main13">
+      <div class="rating">
+        <h3 class="rating-how">How Useful Was This Post?</h3>
+        <span class="star">
+          <i  class="fa-solid fa-star" data-value="1"></i>
+          <i  class="fa-solid fa-star" data-value="2"></i>
+          <i  class="fa-solid fa-star" data-value="3"></i>
+          <i  class="fa-solid fa-star" data-value="4"></i>
+          <i  class="fa-solid fa-star" data-value="5"></i>
+        </span>
+        <div class="rating-click">Click on a star to rate it!</div>
+        <div class="rating-click-reply">Thank you for rating this post!</div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-box">
+        <div class="footer-b" id="box1">
+            <!-- <b>Salary Box</b><br/><br/> -->
+          <img src="SB-logo-foot.PNG" alt="vyapar-logo" style="width: 200px; height: 50px;" /> <br> 
+          <p>
+            Billing Accounting & <br />Inventory software for small
+            <br />business owners in India
+          </p>
+        </div>
+        <div class="footer-b" id="box2">
+          <b>Our Products</b><br /><br />
+          <ul>
+            <li><a href="#">Salary Box App</a></li>
+            <li><a href="#">NeoDove (Telecalling CRM)</a></li>
+          </ul>
+        </div>
+        <div class="footer-b" id="box3">
+          <b>Salary Box Software</b><br /><br />
+          <ul>
+            <li><a href="#">Billing Software</a></li>
+            <li><a href="#">Accounting Software</a></li>
+            <li><a href="#">Inventrory Software</a></li>
+            <li><a href="#">Invoicing Software</a></li>
+            <li><a href="#">Business Management Software</a></li>
+          </ul>
+        </div>
+        <div class="footer-b" id="box4">
+          <b>Salary Box Formats</b><br /><br />
+          <ul>
+            <li><a href="#">Invoice Formats</a></li>
+            <li><a href="#">Quotation Format</a></li>
+            <li><a href="#">Balance Sheet Formats</a></li>
+            <li><a href="#">BillBook Formats</a></li>
+            <li><a href="#">Receipt Formats</a></li>
+            <li><a href="#">Credit Note Formats</a></li>
+            <li><a href="#">Debit Note Formats</a></li>
+            <li><a href="#">Sales Report Format</a></li>
+            <li><a href="#">Estimate Format</a></li>
+            <li><a href="#">Delivery Challan Format</a></li>
+            <li><a href="#">Cash Flow Statement Format</a></li>
+            <li><a href="#">Voucher Formats</a></li>
+            <li><a href="#">Work Order Format</a></li>
+            <li><a href="#">Reconciliation Format</a></li>
+            <li><a href="#">Bill of Exchange</a></li>
+            <li><a href="#">Income Statement</a></li>
+          </ul>
+        </div>
+        <div class="footer-b" id="box5">
+          <b>Contact Info</b>
+          <br /><br />
+          <span>Address</span>
+          <br /><br />
+          <a href="https://www.google.com/maps/place/UNITECH+CYBER+PARK,+Durga+Colony,+Sector+39,+Gurugram,+Haryana+122003/@28.4431219,77.0561611,18z/data=!3m1!4b1!4m6!3m5!1s0x390d1861de9d7bb9:0xe403eb9336f57e45!8m2!3d28.4433481!4d77.0560866!16s%2Fg%2F11bw3hm_df?entry=ttu" target="_blank">
+            Unit No. 1002 & 1003 ,10th Floor, Tower C, Unitech Cyber Park, Durga Colony, Sector 39, Gurugram, Haryana, 122003
+          </a>
+          <br /><br />
+          <span>Phone</span>
+          <br /><br />
+          <a href="#">+91 72900 98241</a>
+          <br />
+          <a href="#">+91 72900 98241</a>
+          <br /><br />
+          <div class="sub">
+            9:00AM - 9:00PM(Monday to Saturday)
+            <br />
+            10:00AM - 7:00PM(Sunday)
+          </div>
+          <br />
+          <span>Email</span>
+          <br /><br />
+          <div class="sub">Support</div>
+          <a href="#"> support@salarybox.in </a>
+        </div>
+        <div class="footer-b" id="box6"></div>
+        <hr size="2px" width="100%" />
+      </div>
+      <div class="footer-last">
+        <p class="copyright">
+            © 2024 by Cresce Technology Private Limited. All rights reserved.
+          <sup>TM</sup>
+        </p>
+        <div class="social">
+          <a href="#" target="_blank"
+            ><i class="fa-brands fa-square-youtube"></i
+          ></a>
+          <a href="#" target="_blank"
+            ><i class="fa-brands fa-square-instagram"></i
+          ></a>
+          <a href="#" target="_blank"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a href="#" target="_blank"
+            ><i class="fa-brands fa-square-twitter"></i
+          ></a>
+          <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/hello.js"></script>
+  </body>
+</html>
